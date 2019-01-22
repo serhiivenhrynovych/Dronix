@@ -1,21 +1,56 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header>
+  <div id="logo" class="menuUp">
+    <div class="logo-display">
+      <img class="header-logo-img" src="assets/photo/logo.svg" style="width: 157px;height: 70px;">
+    </div>
+    <div id="navToggle"><a href="#">Меню</a></div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#main">Головна</a></li>
+      <li><a href="#menu-subscribe">Меню</a></li>
+      <li><a href="#events1">Події&Новини</a></li>
+      <li><a href="#galery">Галерея</a>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+  // navbar script
+  $(document).ready(function() {
+    $("#navToggle a").click(function(e){
+      e.preventDefault();
 
-<router-outlet></router-outlet>
+      $("header > nav").slideToggle("medium");
+      $("#logo").toggleClass("menuUp menuDown");
+    });
+
+    $(window).resize(function() {
+      if($( window ).width() >= "815") {
+        $("header > nav").css("display", "block");
+
+        if($("#logo").attr('class') == "menuDown") {
+          $("#logo").toggleClass("menuUp menuDown");
+        }
+      }
+      else {
+        $("header > nav").css("display", "none");
+      }
+    });
+
+    $("header > nav > ul > li > a").click(function(e) {
+      if($( window ).width() <= "815") {
+        if($(this).siblings().size() > 0 ) {
+          $(this).siblings().slideToggle("fast")
+          $(this).children(".toggle").html($(this).children(".toggle").html() == 'close' ? 'expand' : 'close');
+        }
+      }
+    });
+  });
+  // navbar script finished
+</script>
+
+<div style="padding-top: 70px"></div>
+<app-slider></app-slider>
+
+
