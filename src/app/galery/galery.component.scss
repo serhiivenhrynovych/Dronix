@@ -1,0 +1,38 @@
+.galery-wrapper {
+  background-color: #ffffff;
+}
+
+.main-title {
+  font-family: 'RoboRoboto';
+  font-style: italic;
+  font-size: 48px;
+  color: #292929;
+  text-align: center;
+  margin: 50px auto;
+  display: block;
+}
+
+.galery-images {
+  margin: 0 auto 50px auto;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.responsive {
+  padding: 8px 8px;
+  float: left;
+  width: 33.33333%;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

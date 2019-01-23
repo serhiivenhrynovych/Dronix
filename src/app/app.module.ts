@@ -7,11 +7,13 @@ import {SliderComponent} from './slider/slider.component';
 import {NgxHmCarouselModule} from 'ngx-hm-carousel';
 import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material';
+import {GaleryComponent} from './galery/galery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SliderComponent
+    SliderComponent,
+    GaleryComponent
   ],
   imports: [
     BrowserModule,
