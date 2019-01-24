@@ -8,12 +8,14 @@ import {NgxHmCarouselModule} from 'ngx-hm-carousel';
 import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material';
 import {GaleryComponent} from './galery/galery.component';
+import { GaleryDemoComponent } from './galery-demo/galery-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
-    GaleryComponent
+    GaleryComponent,
+    GaleryDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,6 @@ import {GaleryComponent} from './galery/galery.component';
     NgxHmCarouselModule,
     FormsModule,
     MatIconModule
-
   ],
   providers: [],
   bootstrap: [AppComponent],
