@@ -8,44 +8,12 @@
     <div *ngFor="let elem of imagesArr; index as i">
       <div class="responsive">
         <div class="gallery">
-          <a rel="simplebox" target="_blank" href="photo/img1.JPG">
-            <img src="assets/photo/img1min.jpg" alt="Forest" width="600" height="400">
+          <a rel="simplebox" target="_blank" href="{{elem.fullImg}}">
+            <img src="{{elem.minImg}}" alt="{{elem.title}}">
           </a>
         </div>
       </div>
     </div>
-
-    <div class="responsive">
-      <div class="gallery">
-        <a rel="simplebox" target="_blank" href="photo/img1.JPG">
-          <img src="assets/photo/img1min.jpg" alt="Forest" width="600" height="400">
-        </a>
-      </div>
-    </div>
-
-    <div class="responsive">
-      <div class="gallery">
-        <a rel="simplebox" target="_blank" href="photo/img3.jpeg">
-          <img src="assets/photo/img3min.jpg" alt="Forest" width="600" height="400">
-        </a>
-      </div>
-    </div>
-
-    <div class="responsive">
-      <div class="gallery">
-        <a rel="simplebox" target="_blank" href="photo/img5.JPG">
-          <img src="assets/photo/img5min.jpg" alt="Forest" width="600" height="400">
-        </a>
-      </div>
-    </div>
-    <div class="responsive">
-      <div class="gallery">
-        <a rel="simplebox" target="_blank" href="photo/img6.JPG">
-          <img src="assets/photo/img6min.jpg" alt="Forest" width="600" height="400">
-        </a>
-      </div>
-    </div>
-
 
   </div>
 
