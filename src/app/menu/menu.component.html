@@ -1,0 +1,18 @@
+<section class="menu-wrapper" id="menu">
+  <div class="main-title">Меню</div>
+
+  <div class="button-wrapper">
+    <button class="button" [ngClass]="{'active-button': food}" (click)="foodClick()">Страви</button>
+    <button class="button" [ngClass]="{'active-button': drink}" (click)="drinkClick()">Напої</button>
+  </div>
+
+  <div class="menu-content" *ngIf="drink">
+    <img class="menu-img" src="assets/photo/menu2.jpeg" alt="">
+  </div>
+
+  <div class="menu-content" *ngIf="food">
+    <img class="menu-img" src="assets/photo/menu1.jpeg" alt="">
+  </div>
+
+
+</section>

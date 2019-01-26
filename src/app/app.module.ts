@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material';
 import {GaleryComponent} from './galery/galery.component';
 import { GaleryDemoComponent } from './galery-demo/galery-demo.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     SliderComponent,
     GaleryComponent,
     GaleryDemoComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
