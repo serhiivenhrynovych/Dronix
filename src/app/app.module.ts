@@ -9,13 +9,15 @@ import {FormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material';
 import {GaleryComponent} from './galery/galery.component';
 import { GaleryDemoComponent } from './galery-demo/galery-demo.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
     GaleryComponent,
-    GaleryDemoComponent
+    GaleryDemoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
