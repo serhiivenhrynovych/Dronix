@@ -8,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
 export class GaleryComponent implements OnInit {
 
   imagesArr = [];
+  fullGalery = false;
 
   constructor() { }
 

@@ -6,7 +6,7 @@
   <div class="galery-images">
 
     <div *ngFor="let elem of imagesArr; index as i">
-      <div class="responsive">
+      <div class="responsive" [ngClass]="{'galery-element': i > 5 && !fullGalery}">
         <div class="gallery">
           <a rel="simplebox" target="_blank" href="{{elem.fullImg}}">
             <img src="{{elem.minImg}}" alt="{{elem.title}}">
@@ -15,6 +15,11 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="galery-button">
+    <button *ngIf="!fullGalery" class="button" (click)="fullGalery = true">Показати більше</button>
+    <button *ngIf="fullGalery" class="button" (click)="fullGalery = false">Приховати зображення</button>
   </div>
 
 </section>
