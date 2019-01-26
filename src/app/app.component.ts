@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'smachna-hata';
+  displayMenu = false;
+
+  showMenu() {
+    this.displayMenu = this.displayMenu === false;
+  }
 }

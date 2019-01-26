@@ -29,7 +29,7 @@ header > div#logo > h1 {
 }
 
 header > div#logo > div#navToggle {
-  background-color: rgba(0,0,0,.15);
+  background-color: lightslategrey;
   position: absolute;
   right: 0;
   top: 0;
@@ -37,7 +37,7 @@ header > div#logo > div#navToggle {
 }
 
 header > div#logo > div#navToggle:hover {
-  background-color: rgba(0,0,0,.1);
+  opacity: 0.9;
 }
 
 header > div#logo > div#navToggle > a {
@@ -207,6 +207,11 @@ header > nav > ul > li > nav > ul > li:hover > a {
     right: -50%;
     width: 196px;
   }
+}
+
+
+.display-menu {
+  display: block!important;
 }
 
 /*navbar finished*/

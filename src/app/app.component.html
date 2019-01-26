@@ -3,52 +3,17 @@
     <div class="logo-display">
       <img class="header-logo-img" src="assets/photo/logo.svg" style="width: 157px;height: 70px;">
     </div>
-    <div id="navToggle"><a href="#">Меню</a></div>
+    <div id="navToggle"><a href="#" (click)="showMenu()">Меню</a></div>
   </div>
-  <nav>
+  <nav [ngClass]="{'display-menu': displayMenu}" [ngClass]="{'none-menu': !displayMenu}">
     <ul>
       <li><a href="#main">Головна</a></li>
       <li><a href="#menu-subscribe">Меню</a></li>
-      <li><a href="#events1">Події&Новини</a></li>
       <li><a href="#galery">Галерея</a>
       <li><a href="#contacts">Контакти</a></li>
     </ul>
   </nav>
 </header>
-<script>
-  // navbar script
-  $(document).ready(function() {
-    $("#navToggle a").click(function(e){
-      e.preventDefault();
-
-      $("header > nav").slideToggle("medium");
-      $("#logo").toggleClass("menuUp menuDown");
-    });
-
-    $(window).resize(function() {
-      if($( window ).width() >= "815") {
-        $("header > nav").css("display", "block");
-
-        if($("#logo").attr('class') == "menuDown") {
-          $("#logo").toggleClass("menuUp menuDown");
-        }
-      }
-      else {
-        $("header > nav").css("display", "none");
-      }
-    });
-
-    $("header > nav > ul > li > a").click(function(e) {
-      if($( window ).width() <= "815") {
-        if($(this).siblings().size() > 0 ) {
-          $(this).siblings().slideToggle("fast")
-          $(this).children(".toggle").html($(this).children(".toggle").html() == 'close' ? 'expand' : 'close');
-        }
-      }
-    });
-  });
-  // navbar script finished
-</script>
 
 <app-slider></app-slider>
 <app-menu></app-menu>

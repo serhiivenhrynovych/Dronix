@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SliderComponent implements OnInit {
 
   index = 0;
-  speed = 4000;
+  speed = 8000;
   infinite = true;
   direction = 'right';
   directionToggle = true;
