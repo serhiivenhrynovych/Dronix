@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material';
+import {GaleryDemoComponent} from '../galery-demo/galery-demo.component';
 
 @Component({
   selector: 'app-galery',
@@ -10,7 +12,8 @@ export class GaleryComponent implements OnInit {
   imagesArr = [];
   fullGalery = false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit() {
     this.imagesArr = [];
@@ -45,6 +48,16 @@ export class GaleryComponent implements OnInit {
     this.imagesArr.push({minImg: 'assets/photo/img38min.jpg', fullImg: 'assets/photo/img38.jpeg', title: 'Title 36'});
     this.imagesArr.push({minImg: 'assets/photo/img39min.jpg', fullImg: 'assets/photo/img39.jpeg', title: 'Title 37'});
 
+  }
+
+  openInModal(image) {
+    const dialogRef = this.dialog.open(GaleryDemoComponent, {
+      // height: '90vh',
+      // width: '40vw',
+      data: {
+        image: image
+      }
+    });
   }
 
 }

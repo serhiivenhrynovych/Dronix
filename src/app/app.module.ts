@@ -6,11 +6,12 @@ import {AppComponent} from './app.component';
 import {SliderComponent} from './slider/slider.component';
 import {NgxHmCarouselModule} from 'ngx-hm-carousel';
 import {FormsModule} from '@angular/forms';
-import {MatIconModule} from '@angular/material';
+import {MatDialogModule, MatIconModule} from '@angular/material';
 import {GaleryComponent} from './galery/galery.component';
-import { GaleryDemoComponent } from './galery-demo/galery-demo.component';
-import { FooterComponent } from './footer/footer.component';
-import { MenuComponent } from './menu/menu.component';
+import {GaleryDemoComponent} from './galery-demo/galery-demo.component';
+import {FooterComponent} from './footer/footer.component';
+import {MenuComponent} from './menu/menu.component';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,17 @@ import { MenuComponent } from './menu/menu.component';
     AppRoutingModule,
     NgxHmCarouselModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    SliderComponent
+    SliderComponent,
+    GaleryDemoComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}
