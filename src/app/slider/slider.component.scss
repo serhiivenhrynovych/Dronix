@@ -4,7 +4,7 @@
 /*padding-top: 70px;*/
 /*}*/
 
-$transition_time:.2s;
+$transition_time: .2s;
 
 
 .transition {
@@ -41,8 +41,7 @@ $transition_time:.2s;
     }
 
     .item:last-child,
-    .item:first-child
-    {
+    .item:first-child {
       opacity: 0;
     }
 
@@ -84,7 +83,7 @@ $transition_time:.2s;
 
 @media all and (min-width: 815px) {
   .slider-top {
-    padding-top: 70px;
+    padding-top: 55px;
   }
 }
 

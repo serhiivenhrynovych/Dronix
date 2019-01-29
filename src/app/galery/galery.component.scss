@@ -9,8 +9,9 @@
   font-size: 48px;
   color: #292929;
   text-align: center;
-  margin: 50px auto;
   display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .galery-images {
@@ -68,5 +69,9 @@
     float: left;
     width: 33.33333%;
     box-sizing: border-box;
+  }
+
+  .main-title {
+    padding-top: 55px;
   }
 }

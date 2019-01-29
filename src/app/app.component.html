@@ -1,14 +1,14 @@
 <header>
   <div id="logo" class="menuUp">
     <div class="logo-display">
-      <img class="header-logo-img" src="assets/photo/logo.svg" style="width: 157px;height: 70px;">
+      <img class="header-logo-img" src="assets/photo/logo.svg" style="width: 157px;height: 55px;">
     </div>
     <div id="navToggle"><a href="#" (click)="showMenu()">Меню</a></div>
   </div>
   <nav [ngClass]="{'display-menu': displayMenu}" [ngClass]="{'none-menu': !displayMenu}">
     <ul>
       <li><a href="#main">Головна</a></li>
-      <li><a href="#menu-subscribe">Меню</a></li>
+      <li><a href="#menu">Меню</a></li>
       <li><a href="#galery">Галерея</a>
       <li><a href="#contacts">Контакти</a></li>
     </ul>
