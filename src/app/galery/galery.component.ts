@@ -50,12 +50,13 @@ export class GaleryComponent implements OnInit {
 
   }
 
-  openInModal(image) {
+  openInModal(index) {
     const dialogRef = this.dialog.open(GaleryDemoComponent, {
       maxHeight: '90vh',
       maxWidth: '90vw',
       data: {
-        image: image
+        imagesArr: this.imagesArr,
+        imageIndex: index
       }
     });
   }

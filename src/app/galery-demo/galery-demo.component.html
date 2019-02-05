@@ -1,13 +1,13 @@
-<div class="image-container">
+<div class="image-container" style="padding: 5px">
 
-  <i class="material-icons del-icon">
+  <i class="material-icons icon del-icon" (click)="onNoClick()">
     clear
   </i>
-  <i class="material-icons left-icon">
+  <i class="material-icons icon left-icon" (click)="prevImage()">
     arrow_back_ios
   </i>
-  <i class="material-icons right-icon">
+  <i class="material-icons icon right-icon" (click)="nextImage()">
     arrow_forward_ios
   </i>
-  <img class="fullImage" src="{{data.image.fullImg}}" alt="{{data.image.title}}">
+  <img class="fullImage" src="{{image.fullImg}}" alt="{{image.title}}">
 </div>

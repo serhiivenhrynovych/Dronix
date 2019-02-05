@@ -6,7 +6,7 @@
   <div class="galery-images">
 
     <div *ngFor="let elem of imagesArr; index as i">
-      <div class="responsive" [ngClass]="{'galery-element': i > 5 && !fullGalery}" (click)="openInModal(elem)">
+      <div class="responsive" [ngClass]="{'galery-element': i > 5 && !fullGalery}" (click)="openInModal(i)">
         <div class="gallery">
           <a rel="simplebox" target="_blank">
             <img src="{{elem.minImg}}" alt="{{elem.title}}">
