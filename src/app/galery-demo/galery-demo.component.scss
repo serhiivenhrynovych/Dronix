@@ -19,14 +19,32 @@
 .del-icon {
   right: 10px;
   top: 10px;
+  text-shadow: 2px 2px 8px black;
 }
 
 .left-icon {
   left: 10px;
   top: 50%;
+  transform: rotate(180deg);
+  font-size: 25px;
+  padding: 10px;
+  text-shadow: 2px 2px 8px black;
 }
 
 .right-icon {
   right: 10px;
   top: 50%;
+  font-size: 25px;
+  padding: 10px;
+  text-shadow: 2px 2px 8px black;
+}
+
+.left-icon:hover {
+  background-color: lightslategrey;
+  border-radius: 50%;
+}
+
+.right-icon:hover {
+  background-color: lightslategrey;
+  border-radius: 50%;
 }
