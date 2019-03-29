@@ -11,18 +11,51 @@
     </div>
   </div>
   <div class="filter-wrapper">
-    <div class="filter-name">
-      Фільтр
+    <div class="filter-left">
+      <div class="filter-name">
+        <i style="vertical-align: text-bottom" class="material-icons">
+          filter_list
+        </i>
+        Фільтр
+      </div>
+      <form [formGroup]="dronForm" class="filter-brands">
+        <select formControlName="dronControl" class="brand-select">
+          <option [value]="brand" *ngFor="let brand of brands">{{brand}}</option>
+        </select>
+      </form>
     </div>
-    <div class="filter-brands">
-      Всі бренди
-    </div>
+
     <div class="filter-sorting">
       <div class="sorting-title">
         Сортувати за
       </div>
-      <div class="sorting-button">Назвою</div>
-      <div class="sorting-button">Ціною</div>
+      <button mat-button class="sorting-button sorting-button-left" (click)="sortByName()">
+        Назвою
+        <img src="assets/icons/sorting.svg" alt="">
+      </button>
+      <button mat-button class="sorting-button sorting-button-right" (click)="sortByPrice()">
+        Ціною
+        <img src="assets/icons/sorting.svg" alt="">
+      </button>
+    </div>
+  </div>
+
+  <div class="drons-wrapper" *ngIf="isDronsActive">
+    <div *ngFor="let elem of dronsArr; index as i">
+      <div class="drone-info" [ngClass]="{'galery-element': i > 5 && !fullGalery}" (click)="openInModal(i)">
+        <div class="gallery">
+          <a rel="simplebox" target="_blank">
+            <img src="{{elem.minImg}}">
+          </a>
+        </div>
+        <div class="drone-name">
+          {{elem.name}}
+        </div>
+        <div class="drone-price">
+          {{elem.price}} грн
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<div></div>

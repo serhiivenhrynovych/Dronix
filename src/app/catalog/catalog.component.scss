@@ -34,11 +34,22 @@
   text-align: center;
   width: 90%;
   background-color: #E0E0E0;
-  display: inline-block;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-left {
+  display: flex;
 }
 
 .filter-name {
   float: left;
+  line-height: 60px;
+  background-color: #CECECE;
+  border-radius: 8px 0 0 8px;
+  padding-right: 5px;
 }
 
 .filter-brands {
@@ -46,20 +57,73 @@
   float: left;
 }
 
+.brand-select {
+  margin: 10px 30px;
+  padding: 4px 20px;
+  background-color: white;
+  border-radius: 4px;
+}
+
 .filter-sorting {
   display: inherit;
   float: right;
+  margin-right: 100px;
 }
 
 .sorting-title {
   float: left;
+  display: flex;
+  align-items: center;
 }
 
 .sorting-buttons {
-
+  margin: 0 20px;
 }
 
 .sorting-button {
   float: left;
+  margin: 10px 0;
+  background-color: white;
+  font-weight: inherit;
+}
+
+.sorting-button-left {
+  margin-left: 20px;
+  border-radius: 4px 0 0 4px;
+  border-right: 1px grey solid;
+}
+
+.sorting-button-right {
+  border-radius: 0 4px 4px 0;
+}
+
+.drons-wrapper {
+  margin: 20px 0 10px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.drone-info {
+  padding: 12px 10px;
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.drone-name {
+  text-align: left;
+  cursor: pointer;
+}
+
+.drone-price {
+  text-align: left;
+  color: #5956FF;
 }
 

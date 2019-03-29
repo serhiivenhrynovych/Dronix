@@ -5,8 +5,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {SliderComponent} from './slider/slider.component';
 import {NgxHmCarouselModule} from 'ngx-hm-carousel';
-import {FormsModule} from '@angular/forms';
-import {MatButtonModule, MatDialogModule, MatIconModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatButtonModule, MatDialogModule, MatFormFieldModule, MatIconModule, MatMenuModule, MatSelectModule} from '@angular/material';
 import {FooterComponent} from './footer/footer.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {AgmCoreModule} from '@agm/core';
@@ -35,7 +35,11 @@ import { CatalogComponent } from './catalog/catalog.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJ5WxmMRuCDFQVuCXGWvWnexnNAzyWb78'
     }),
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
