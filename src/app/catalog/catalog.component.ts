@@ -15,8 +15,10 @@ export class CatalogComponent implements OnInit {
   brands = ['Всі бренди', 'Xiaomi', 'Maizu'];
   details = ['Всі деталі', 'Корпуси', 'Шлейфи', 'Лопасти'];
   dronsArr: Dron[];
-  sortedByName = false;
-  sortedByPrice = false;
+  detailsArr: Detail[];
+  contentToShow;
+  sortedByName: boolean;
+  sortedByPrice: boolean;
 
   constructor(private fb: FormBuilder) {}
   ngOnInit() {
@@ -28,41 +30,59 @@ export class CatalogComponent implements OnInit {
     });
 
     this.dronsArr = [
-      {name: 'Dron1', price: '68000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Dron2', price: '54000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Perer', price: '54000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Dron2', price: '54000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Dron3', price: '75000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Alala', price: '23000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Dron5', price: '34000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Dron6', price: '24000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Dron1', price: 68000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Dron2', price: 54000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Perer', price: 54000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Dron2', price: 54000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Dron3', price: 75000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Alala', price: 123000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Dron5', price: 34000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Dron6', price: 240000, minImg: 'assets/photo/img4min.jpg', fullImg: 'assets/photo/img5.JPG'},
     ];
+
+    this.detailsArr = [
+      {name: 'Detail1', price: 300, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Detail2', price: 600, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Detail3', price: 345, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Detail4', price: 800, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Detail5', price: 1200, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Detail6', price: 540, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Detail7', price: 330, minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
+    ];
+
+    this.contentToShow = this.dronsArr;
+
   }
 
   dronsActive() {
     this.isDronsActive = true;
+    this.contentToShow = this.dronsArr;
   }
 
   detailsActive() {
     this.isDronsActive = false;
+    this.contentToShow = this.detailsArr;
+    console.log(this.contentToShow);
   }
 
   sortByName() {
     if (this.sortedByName) {
-      this.dronsArr.sort((a, b) => b.name.localeCompare(a.name));
+      this.contentToShow.sort((a, b) => b.name.localeCompare(a.name));
       this.sortedByName = false;
     } else {
-      this.dronsArr.sort((a, b) => a.name.localeCompare(b.name));
+      this.contentToShow.sort((a, b) => a.name.localeCompare(b.name));
+      this.sortedByPrice = null;
       this.sortedByName = true;
     }
   }
 
   sortByPrice() {
     if (this.sortedByPrice) {
-      this.dronsArr.sort((a, b) => b.price.localeCompare(a.price));
+      this.contentToShow.sort((a, b) => b.price - (a.price));
       this.sortedByPrice = false;
     } else {
-      this.dronsArr.sort((a, b) => a.price.localeCompare(b.price));
+      this.contentToShow.sort((a, b) => a.price - (b.price));
+      this.sortedByName = null;
       this.sortedByPrice = true;
     }
   }
@@ -71,7 +91,14 @@ export class CatalogComponent implements OnInit {
 
 export interface Dron {
   name: string;
-  price: string;
+  price: number;
+  minImg: string;
+  fullImg: string;
+}
+
+export interface Detail {
+  name: string;
+  price: number;
   minImg: string;
   fullImg: string;
 }

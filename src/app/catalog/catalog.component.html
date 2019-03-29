@@ -35,19 +35,23 @@
       <div class="sorting-title">
         Сортувати за
       </div>
-      <button mat-button class="sorting-button sorting-button-left" (click)="sortByName()">
+      <button mat-button class="sorting-button sorting-button-left" (click)="sortByName()" [ngClass]="{'selected-item': sortedByName === true || sortedByName === false}">
         Назвою
-        <img src="assets/icons/sorting.svg" alt="">
+        <img src="assets/icons/sort-active.svg" alt="" *ngIf="sortedByName === true" style="transform: rotate(180deg)">
+        <img src="assets/icons/sort-active.svg" alt="" *ngIf="sortedByName === false">
+        <img src="assets/icons/sort-unactive.svg" alt="" *ngIf="sortedByName !== true && sortedByName !== false">
       </button>
-      <button mat-button class="sorting-button sorting-button-right" (click)="sortByPrice()">
+      <button mat-button class="sorting-button sorting-button-right" (click)="sortByPrice()" [ngClass]="{'selected-item': sortedByPrice === true || sortedByPrice === false}">
         Ціною
-        <img src="assets/icons/sorting.svg" alt="">
+        <img src="assets/icons/sort-active.svg" alt="" *ngIf="sortedByPrice === true" style="transform: rotate(180deg)">
+        <img src="assets/icons/sort-active.svg" alt="" *ngIf="sortedByPrice === false">
+        <img src="assets/icons/sort-unactive.svg" alt="" *ngIf="sortedByPrice !== true && sortedByPrice !== false">
       </button>
     </div>
   </div>
 
-  <div class="drons-wrapper" *ngIf="isDronsActive">
-    <div *ngFor="let elem of dronsArr; index as i">
+  <div class="drons-wrapper">
+    <div *ngFor="let elem of contentToShow; index as i">
       <div class="drone-info" [ngClass]="{'galery-element': i > 5 && !fullGalery}" (click)="openInModal(i)">
         <div class="gallery">
           <a rel="simplebox" target="_blank">
