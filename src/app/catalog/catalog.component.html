@@ -18,9 +18,15 @@
         </i>
         Фільтр
       </div>
-      <form [formGroup]="dronForm" class="filter-brands">
+      <form [formGroup]="dronForm" class="filter-brands" *ngIf="isDronsActive">
         <select formControlName="dronControl" class="brand-select">
           <option [value]="brand" *ngFor="let brand of brands">{{brand}}</option>
+        </select>
+      </form>
+
+      <form [formGroup]="detailForm" class="filter-brands" *ngIf="!isDronsActive">
+        <select formControlName="detailControl" class="brand-select">
+          <option [value]="detail" *ngFor="let detail of details">{{detail}}</option>
         </select>
       </form>
     </div>

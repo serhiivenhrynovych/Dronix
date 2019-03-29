@@ -11,7 +11,9 @@ export class CatalogComponent implements OnInit {
 
   isDronsActive = true;
   dronForm: FormGroup;
+  detailForm: FormGroup;
   brands = ['Всі бренди', 'Xiaomi', 'Maizu'];
+  details = ['Всі деталі', 'Корпуси', 'Шлейфи', 'Лопасти'];
   dronsArr: Dron[];
   sortedByName = false;
   sortedByPrice = false;
@@ -21,6 +23,10 @@ export class CatalogComponent implements OnInit {
     this.dronForm = this.fb.group({
       dronControl: ['Всі бренди']
     });
+    this.detailForm = this.fb.group({
+      detailControl: ['Всі деталі']
+    });
+
     this.dronsArr = [
       {name: 'Dron1', price: '68000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
       {name: 'Dron2', price: '54000', minImg: 'assets/photo/img5min.jpg', fullImg: 'assets/photo/img5.JPG'},
@@ -52,7 +58,6 @@ export class CatalogComponent implements OnInit {
   }
 
   sortByPrice() {
-    console.log('hello');
     if (this.sortedByPrice) {
       this.dronsArr.sort((a, b) => b.price.localeCompare(a.price));
       this.sortedByPrice = false;
