@@ -1,3 +1,28 @@
-<p>
-  catalog works!
-</p>
+<div class="catalog-wrapper" id="catalog">
+  <div class="catalog-title">
+    Каталог
+  </div>
+  <div class="catalog-buttons">
+    <div class="catalog-button align-right" [ngClass]="{'catalog-active' : isDronsActive}" (click)="dronsActive()">
+      Дрони
+    </div>
+    <div class="catalog-button align-left" [ngClass]="{'catalog-active' : !isDronsActive}" (click)="detailsActive()">
+      Запчастини до дронів
+    </div>
+  </div>
+  <div class="filter-wrapper">
+    <div class="filter-name">
+      Фільтр
+    </div>
+    <div class="filter-brands">
+      Всі бренди
+    </div>
+    <div class="filter-sorting">
+      <div class="sorting-title">
+        Сортувати за
+      </div>
+      <div class="sorting-button">Назвою</div>
+      <div class="sorting-button">Ціною</div>
+    </div>
+  </div>
+</div>

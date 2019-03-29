@@ -1,0 +1,65 @@
+.catalog-wrapper {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.catalog-button {
+  box-sizing: border-box;
+  width: 50%;
+  display: inline-block;
+  padding: 0 26px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.catalog-active {
+  color: #5956FF;
+}
+
+.catalog-title {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+.filter-wrapper {
+  margin: 10px auto;
+  text-align: center;
+  width: 90%;
+  background-color: #E0E0E0;
+  display: inline-block;
+}
+
+.filter-name {
+  float: left;
+}
+
+.filter-brands {
+  display: inherit;
+  float: left;
+}
+
+.filter-sorting {
+  display: inherit;
+  float: right;
+}
+
+.sorting-title {
+  float: left;
+}
+
+.sorting-buttons {
+
+}
+
+.sorting-button {
+  float: left;
+}
+

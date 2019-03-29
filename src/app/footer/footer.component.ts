@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  lat = 49.8512859;
+  lng = 24.0299442;
+
   constructor() { }
 
   ngOnInit() {

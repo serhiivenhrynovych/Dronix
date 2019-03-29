@@ -6,37 +6,41 @@ import {AppComponent} from './app.component';
 import {SliderComponent} from './slider/slider.component';
 import {NgxHmCarouselModule} from 'ngx-hm-carousel';
 import {FormsModule} from '@angular/forms';
-import {MatDialogModule, MatIconModule} from '@angular/material';
-import {GaleryComponent} from './galery/galery.component';
-import {GaleryDemoComponent} from './galery-demo/galery-demo.component';
+import {MatButtonModule, MatDialogModule, MatIconModule} from '@angular/material';
 import {FooterComponent} from './footer/footer.component';
-import {MenuComponent} from './menu/menu.component';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {AgmCoreModule} from '@agm/core';
+import {CommonModule} from '@angular/common';
+import { ServiceComponent } from './service/service.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
-    GaleryComponent,
-    GaleryDemoComponent,
     FooterComponent,
-    MenuComponent
+    ServiceComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     NgxHmCarouselModule,
     FormsModule,
     MatIconModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDJ5WxmMRuCDFQVuCXGWvWnexnNAzyWb78'
+    }),
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    SliderComponent,
-    GaleryDemoComponent
+    SliderComponent
   ]
 })
 export class AppModule {

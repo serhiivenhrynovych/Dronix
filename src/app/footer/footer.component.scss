@@ -1,42 +1,24 @@
 .footer-wrapper {
-  background-color: lightslategrey;
-  display: block;
-}
-
-.footer-text-wrapper {
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 0;
-  display: block;
-}
-
-.footer-logo {
-  margin: 0 auto;
-  width: 300px;
-}
-
-.social {
-  margin: 10px auto;
-  color: #ffffff;
+  padding-top: 30px;
   text-align: center;
 }
 
-.fa {
-  padding: 0 5px;
+.footer-title {
+  font-size: 36px;
+  margin: 20px 0;
 }
 
-.footer-text {
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.6;
-  letter-spacing: 2px;
+.footer-content {
+  padding: 4px 0;
 }
 
-.shceduler {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-top: 10px;
+.footer-call-us {
+  font-size: 32px;
+  padding: 12px 0;
+}
+
+agm-map {
+  height: 300px;
 }
 
 .copyright {
