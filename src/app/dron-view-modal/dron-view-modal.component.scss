@@ -1,0 +1,115 @@
+.drone-view-wrapper {
+  position: relative;
+  color: #333333;
+}
+
+.drone-name {
+  font-size: 36px;
+}
+
+.drone-image {
+  width: 40%;
+  box-sizing: border-box;
+  float: left;
+
+  img {
+    width: 100%;
+  }
+}
+
+.drone-info-content {
+  display: flex;
+}
+
+.drone-info-right {
+  width: 60%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 20px;
+}
+
+.drone-characteristics {
+  display: inline-block;
+
+  .characteristic {
+    width: 33%;
+    float: left;
+    margin: 5px 0;
+    display: flex;
+
+    .icon {
+      color: #DADADA;
+
+      i {
+        font-size: 56px;
+      }
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .content-info {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+.drone-price-number {
+  font-size: 48px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  .price {
+    color: #5956FF;
+  }
+
+  .number-wrapper {
+    display: inherit;
+    flex-direction: column;
+    padding-right: 20px;
+
+    .title {
+      font-size: 16px;
+    }
+
+    .content {
+      background-color: #5956FFa3;
+      border-radius: 4px;
+      text-align: center;
+
+      .number {
+        font-size: 24px;
+        color: white;
+      }
+    }
+  }
+}
+
+.drone-detail-info {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 24px;
+
+  .title {
+    font-size: 24px;
+  }
+
+  .content {
+    margin-top: 16px;
+    font-size: 16px;
+    max-width: 70%;
+  }
+}
+
+.modal-clear {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: 48px;
+  cursor: pointer;
+  color: #333333;
+}
+

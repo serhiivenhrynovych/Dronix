@@ -13,6 +13,8 @@ import {AgmCoreModule} from '@agm/core';
 import {CommonModule} from '@angular/common';
 import { ServiceComponent } from './service/service.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { DronViewModalComponent } from './dron-view-modal/dron-view-modal.component';
+import { DetailViewModalComponent } from './detail-view-modal/detail-view-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CatalogComponent } from './catalog/catalog.component';
     SliderComponent,
     FooterComponent,
     ServiceComponent,
-    CatalogComponent
+    CatalogComponent,
+    DronViewModalComponent,
+    DetailViewModalComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import { CatalogComponent } from './catalog/catalog.component';
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
-    SliderComponent
+    SliderComponent,
+    DronViewModalComponent,
+    DetailViewModalComponent
   ]
 })
 export class AppModule {

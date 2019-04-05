@@ -1,0 +1,145 @@
+<div class="drone-view-wrapper">
+
+  <i class="material-icons modal-clear" (click)="onNoClick()">
+    clear
+  </i>
+
+  <div class="drone-info-content">
+    <div class="drone-image">
+      <img src="{{element.minImg}}">
+    </div>
+
+    <div class="drone-info-right">
+      <div class="drone-name">{{element.name}}</div>
+
+      <div class="drone-characteristics">
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              battery_charging_full
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Тривалість польоту
+            </div>
+            <div class="content-info">
+              {{element.charge}}хв
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              speaker_phone
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Дальність управління
+            </div>
+            <div class="content-info">
+              {{element.controlLength}} КМ
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              network_check
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Максимальна швидкість
+            </div>
+            <div class="content-info">
+              {{element.speed}} КМ/ХВ
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              wifi_tethering
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Дальність сенсорів
+            </div>
+            <div class="content-info">
+              {{element.sensorLength}} М
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              donut_small
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Стабілізатор
+            </div>
+            <div class="content-info">
+              {{element.stabilizer}}Х осьовий
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              camera_alt
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Кіль-ть пікселів
+            </div>
+            <div class="content-info">
+              {{element.pixels}} МП
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drone-price-number">
+        <div class="price">
+          {{element.price}} грн
+        </div>
+
+        <div class="number-wrapper">
+          <div class="title">
+            Для замовлення дзвоніть за телефоном
+          </div>
+          <div class="content">
+            <div class="number">
+              +38 (099) 55 21 395
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="drone-detail-info">
+    <div class="title">
+      Детальна інформація
+    </div>
+
+    <div class="content">
+      Режим TapFly дает полную свободу творчества: вам всего лишь нужно скомпоновать кадр. Задайте направление на экране телефона, и Spark отправится туда, распознавая препятствия с помощью системы обзора. Захотелось поснимать в другом месте? Выберите нужную точку на экране и дрон плавно изменит траекторию. Легко и просто.
+      Режим TapFly дает полную свободу творчества: вам всего лишь нужно скомпоновать кадр. Задайте направление на экране телефона, и Spark отправится туда, распознавая препятствия с помощью системы обзора. Захотелось поснимать в другом месте? Выберите нужную точку на экране и дрон плавно изменит траекторию. Легко и просто.
+      Режим TapFly дает полную свободу творчества: вам всего лишь нужно скомпоновать кадр. Задайте направление на экране телефона, и Spark отправится туда, распознавая препятствия с помощью системы обзора. Захотелось поснимать в другом месте? Выберите нужную точку на экране и дрон плавно изменит траекторию. Легко и просто.
+    </div>
+  </div>
+
+
+</div>
