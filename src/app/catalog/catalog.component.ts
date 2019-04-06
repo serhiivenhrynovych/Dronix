@@ -21,6 +21,7 @@ export class CatalogComponent implements OnInit {
   contentToShow;
   sortedByName: boolean;
   sortedByPrice: boolean;
+  fullCatalog = false;
 
   constructor(private fb: FormBuilder, public dialog: MatDialog) {
   }

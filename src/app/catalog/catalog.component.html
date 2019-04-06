@@ -52,7 +52,7 @@
 
   <div class="drons-wrapper">
     <div *ngFor="let elem of contentToShow; index as i">
-      <div class="drone-info" [ngClass]="{'galery-element': i > 5 && !fullGalery}" (click)="isDronsActive ? openViewDroneModal(elem) : openViewDetailModal(elem)">
+      <div class="drone-info" [ngClass]="{'catalog-element': i > 7 && !fullCatalog}" (click)="isDronsActive ? openViewDroneModal(elem) : openViewDetailModal(elem)">
         <div class="gallery">
           <a rel="simplebox" target="_blank">
             <img src="{{elem.minImg}}">
@@ -66,6 +66,18 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="show-more-button-wrapper">
+    <button *ngIf="!fullCatalog" (click)="fullCatalog = true" mat-button class="show-more-button">
+      Показати більше
+    </button>
+    <button *ngIf="fullCatalog && isDronsActive" (click)="fullCatalog = false" mat-button class="show-more-button">
+      Приховати дрони
+    </button>
+    <button *ngIf="fullCatalog && !isDronsActive" (click)="fullCatalog = false" mat-button class="show-more-button">
+      Приховати запчастини
+    </button>
   </div>
 </div>
 <div></div>
