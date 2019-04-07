@@ -1,0 +1,97 @@
+.drone-catalog-wrapper {
+  margin: 50px 0;
+}
+
+.drone-catalog-title {
+  font-size: 36px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.drone-info-back1 {
+  background-image: url("../../assets/photo/drone-back1.jpg");
+}
+
+.drone-info-back2 {
+  background-image: url("../../assets/photo/drone-back2.jpg");
+}
+
+.drone-info {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 20px;
+
+  .drone-content {
+    display: flex;
+    margin: 20px;
+    padding: 30px;
+    width: 50%;
+    min-width: 650px;
+    background-color: white;
+
+    .image {
+      width: 50%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content-info {
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .text {
+        margin: 10px 0;
+      }
+
+      .price {
+        color: #148bbc;
+      }
+
+    }
+
+  }
+}
+
+.details-info {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+
+  .details-full-info {
+    margin: 10px;
+    width: 20%;
+    border: 1px solid #e0e0e0;
+    box-shadow: 3px 3px 6px grey;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    .drone-price-number {
+      color: #148bbc;
+    }
+  }
+
+  .details-full-info:hover {
+    box-shadow: 3px 3px 16px #148bbc;
+  }
+
+}
+
+.detail-elem-text {
+  padding: 0 0 8px 16px;
+}
+
+

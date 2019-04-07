@@ -15,6 +15,7 @@ import { ServiceComponent } from './service/service.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DronViewModalComponent } from './dron-view-modal/dron-view-modal.component';
 import { DetailViewModalComponent } from './detail-view-modal/detail-view-modal.component';
+import { DronesCatalogComponent } from './drones-catalog/drones-catalog.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DetailViewModalComponent } from './detail-view-modal/detail-view-modal.
     ServiceComponent,
     CatalogComponent,
     DronViewModalComponent,
-    DetailViewModalComponent
+    DetailViewModalComponent,
+    DronesCatalogComponent
   ],
   imports: [
     BrowserModule,
