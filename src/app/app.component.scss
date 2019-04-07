@@ -10,7 +10,7 @@ header {
 }
 
 header > div#logo {
-  line-height: 55px;
+  line-height: 80px;
   position: relative;
 }
 
@@ -122,7 +122,7 @@ header > nav > ul > li > nav > ul > li:hover > a {
 }
 
 .logo-display {
-  height: 55px;
+  height: 80px;
   /*width: 100%;*/
 }
 
@@ -139,16 +139,16 @@ header > nav > ul > li > nav > ul > li:hover > a {
   header {
     background-color: white;
     flex-direction: row;
-    line-height: 55px;
+    line-height: 80px;
     padding: 0 3rem;
-    position: fixed;
+    //position: fixed;
     text-align: left;
     width: 100%;
   }
 
   header > div#logo {
     background-color: transparent;
-    line-height: 55px;
+    line-height: 80px;
   }
 
   header > div#logo > h1 {

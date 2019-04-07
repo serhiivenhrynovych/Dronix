@@ -1,10 +1,115 @@
 .service-wrapper {
-  padding-top: 30px;
   text-align: center;
 }
-
 
 .service-title {
   font-size: 36px;
   margin: 20px 0;
 }
+
+.drone-service {
+  display: flex;
+  margin: 10px 52px;
+  justify-content: space-around;
+
+  .block-4 {
+    max-width: 365px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 3px 3px 6px grey;
+    margin: 0 10px;
+
+  }
+
+  .icon {
+    i {
+      font-size: 72px;
+      color: #5956FF;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+}
+
+.second-title {
+  background-color: #5956FF;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 36px;
+  padding: 8px;
+}
+
+.drone-used {
+  margin: 58px 0;
+  display: flex;
+
+  img {
+    width: 100%;
+  }
+
+  .used-full-content {
+    font-size: 18px;
+    text-align: left;
+    margin: 30px;
+    //width: 70%;
+
+    .used-content {
+      margin: 10px;
+    }
+
+    .icon {
+      color: #5956FF;
+    }
+  }
+
+}
+
+.third-title {
+  background-color: #5956FF;
+  color: white;
+  font-size: 24px;
+  padding: 8px;
+}
+
+.justify-reverse {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 980px) {
+
+  .drone-service {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: -webkit-center;
+
+    .block-4 {
+      margin: 10px 0;
+    }
+
+  }
+
+  .drone-used {
+    flex-direction: column;
+
+    img {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 30px;
+    }
+  }
+
+  .justify-reverse {
+    flex-direction: column-reverse;
+  }
+
+}
+
