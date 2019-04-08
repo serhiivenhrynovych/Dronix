@@ -4,70 +4,168 @@
     <br>
     з якими ми працюємо
   </div>
-  <div class="drone-info-wrapper">
-    <div class="drone-info drone-info-back1">
-      <div class="drone-content">
-        <div class="image">
-          <img src="assets/photo/drone1.jpg" alt="">
-        </div>
-        <div class="content-info">
-          <div class="title">
-            Mavic 2 Pro
-          </div>
-          <div class="text">
-            Мы всегда мечтали создать совершенный коптер. Коптер, обладающий всеми лучшими технологиями DJI, коптер, который преобразит мир аэросъемки. Эта мечта исполнилась. Мы создали Mavic 2.
-          </div>
-          <div class="price">
-            47 820 грн з ПДВ.
-          </div>
-        </div>
-      </div>
-    </div>
+  <!--<div class="drone-info-wrapper">-->
+    <!--<div class="drone-info drone-info-back1">-->
+      <!--<div class="drone-content">-->
+        <!--<div class="image">-->
+          <!--<img src="assets/photo/drone1.jpg" alt="">-->
+        <!--</div>-->
+        <!--<div class="content-info">-->
+          <!--<div class="title">-->
+            <!--Mavic 2 Pro-->
+          <!--</div>-->
+          <!--<div class="text">-->
+            <!--Мы всегда мечтали создать совершенный коптер. Коптер, обладающий всеми лучшими технологиями DJI, коптер, который преобразит мир аэросъемки. Эта мечта исполнилась. Мы создали Mavic 2.-->
+          <!--</div>-->
+          <!--<div class="price">-->
+            <!--47 820 грн з ПДВ.-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
 
-    <div class="details-info">
+    <!--<div class="details-info">-->
 
-      <div class="details-full-info" *ngFor="let elem of detailsArr; index as i">
-        <div class="details-content">
-          <div class="gallery">
-            <a rel="simplebox" target="_blank">
-              <img src="{{elem.minImg}}">
-            </a>
-          </div>
-          <div class="drone-name">
-            {{elem.name}}
-          </div>
-          <div class="drone-price-number">
-            {{elem.price}} грн
-          </div>
-        </div>
-      </div>
+      <!--<div class="details-full-info" *ngFor="let elem of detailsArr; index as i">-->
+        <!--<div class="details-content">-->
+          <!--<div class="gallery">-->
+            <!--<a rel="simplebox" target="_blank">-->
+              <!--<img src="{{elem.minImg}}">-->
+            <!--</a>-->
+          <!--</div>-->
+          <!--<div class="drone-name">-->
+            <!--{{elem.name}}-->
+          <!--</div>-->
+          <!--<div class="drone-price-number">-->
+            <!--{{elem.price}} грн-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
 
-    </div>
-  </div>
+    <!--</div>-->
+  <!--</div>-->
 
-  <div class="drone-info-wrapper">
+  <div class="drone-info-wrapper" *ngFor="let droneElem of dronesArr; index as i">
     <div class="drone-info drone-info-back2">
       <div class="drone-content">
         <div class="image">
-          <img src="assets/photo/drone2.jpg" alt="">
+          <img src="{{droneElem.minImg}}" alt="">
         </div>
         <div class="content-info">
           <div class="title">
-            Phantom 4 Pro
+            {{droneElem.name}}
           </div>
           <div class="text">
             Мы всегда мечтали создать совершенный коптер. Коптер, обладающий всеми лучшими технологиями DJI, коптер, который преобразит мир аэросъемки. Эта мечта исполнилась. Мы создали Mavic 2.
           </div>
           <div class="price">
-            47 820 грн з ПДВ.
+            {{droneElem.price}} грн з ПДВ.
           </div>
         </div>
       </div>
+      <div class="drone-characteristics">
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              battery_charging_full
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Тривалість польоту
+            </div>
+            <div class="content-info">
+              {{droneElem.charge}}хв
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              speaker_phone
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Дальність управління
+            </div>
+            <div class="content-info">
+              {{droneElem.controlLength}} КМ
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              network_check
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Максимальна швидкість
+            </div>
+            <div class="content-info">
+              {{droneElem.speed}} КМ/ХВ
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              wifi_tethering
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Дальність сенсорів
+            </div>
+            <div class="content-info">
+              {{droneElem.sensorLength}} М
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              donut_small
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Стабілізатор
+            </div>
+            <div class="content-info">
+              {{droneElem.stabilizer}}Х осьовий
+            </div>
+          </div>
+        </div>
+
+        <div class="characteristic">
+          <div class="icon">
+            <i class="material-icons">
+              camera_alt
+            </i>
+          </div>
+          <div class="content">
+            <div class="title">
+              Кіль-ть пікселів
+            </div>
+            <div class="content-info">
+              {{droneElem.pixels}} МП
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="details-info">
 
-      <div class="details-full-info" (click)="openViewDetailModal(elem)" *ngFor="let elem of detailsArr; index as i">
+      <div class="details-full-info" (click)="openViewDetailModal(elem)" *ngFor="let elem of droneElem.details; index as i">
         <div class="details-content">
           <div class="gallery">
             <a rel="simplebox" target="_blank">

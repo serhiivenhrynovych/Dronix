@@ -1,3 +1,23 @@
+@media all and (max-width: 700px) {
+  .drone-info {
+    flex-direction: column;
+  }
+  .drone-characteristics {
+    max-width: 100%;
+    padding: 0 40px 40px 40px;
+  }
+
+  .characteristic {
+    width: 100%;
+  }
+
+  .drone-content {
+    flex-direction: column-reverse;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .drone-catalog-wrapper {
   margin: 50px 0;
 }
@@ -16,18 +36,23 @@
   background-image: url("../../assets/photo/drone-back2.jpg");
 }
 
+.drone-info-wrapper {
+  margin: 50px 0;
+}
+
 .drone-info {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   padding: 20px;
+  display: flex;
 
   .drone-content {
     display: flex;
-    margin: 20px;
+    //margin: 20px;
     padding: 30px;
-    width: 50%;
-    min-width: 650px;
+    //width: 50%;
+    //min-width: 650px;
     background-color: white;
 
     .image {
@@ -74,6 +99,7 @@
     border: 1px solid #e0e0e0;
     box-shadow: 3px 3px 6px grey;
     cursor: pointer;
+    display: flex;
 
     img {
       width: 100%;
@@ -94,4 +120,71 @@
   padding: 0 0 8px 16px;
 }
 
+.characteristic {
+  width: 50%;
+  float: left;
+  margin: 5px 0;
+  display: flex;
+
+  .icon {
+    color: #DADADA;
+
+    i {
+      color: #148bbc;
+      font-size: 56px;
+    }
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .content-info {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+
+.drone-characteristics {
+  background-color: white;
+  padding: 40px 10px;
+}
+
+@media all and (max-width: 700px) {
+  .drone-info {
+    flex-direction: column;
+  }
+  .drone-characteristics {
+    max-width: 100%;
+    padding: 0 40px 40px 40px;
+  }
+
+  .characteristic {
+    width: 100%;
+  }
+
+  .drone-content {
+    flex-direction: column-reverse;
+    max-width: 100%;
+  }
+}
+
+@media all and (min-width: 700px) and (max-width: 1200px) {
+  .drone-info {
+    flex-direction: column;
+  }
+  .drone-characteristics {
+    width: 50%;
+    min-width: 650px;
+    padding: 0 40px 40px 40px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .drone-content {
+    width: 50%;
+    min-width: 650px;
+  }
+}
 
