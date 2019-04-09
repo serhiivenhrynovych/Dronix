@@ -29,11 +29,11 @@
 }
 
 .drone-info-back1 {
-  background-image: url("../../assets/photo/drone-back1.jpg");
+  background-image: url("../../assets/photo/drone-back.jpg");
 }
 
 .drone-info-back2 {
-  background-image: url("../../assets/photo/drone-back2.jpg");
+  background-image: url("../../assets/photo/drone-back.jpg");
 }
 
 .drone-info-wrapper {
@@ -65,6 +65,8 @@
 
       img {
         width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
       }
     }
 
