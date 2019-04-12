@@ -36,9 +36,9 @@ export class DronesCatalogComponent implements OnInit {
     ];
 
     this.detailsArr2 = [
-      {name: 'Лопасті оригінал', price: 800, minImg: 'assets/photo/detail31.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Лопасті оригінал', price: 800, minImg: 'assets/photo/detail33.jpg', fullImg: 'assets/photo/img5.JPG'},
       {name: 'Лопасті копія', price: 300, minImg: 'assets/photo/detail32.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Акумулятор оригінал', price: 3300, minImg: 'assets/photo/detail33.jpg', fullImg: 'assets/photo/img5.JPG'},
+      {name: 'Акумулятор оригінал', price: 3300, minImg: 'assets/photo/detail31.jpg', fullImg: 'assets/photo/img5.JPG'},
     ];
 
     this.detailsArr3 = [
@@ -67,6 +67,8 @@ export class DronesCatalogComponent implements OnInit {
     ];
 
     this.dronesArr = [
+      {name: 'XIAOMI MI DRONE 4K', price: 34000, minImg: 'assets/photo/dronXiaomiMi.jpg', fullImg: 'assets/photo/img5.JPG', charge: '20', controlLength: '3',
+        speed: '50', sensorLength: '30', stabilizer: '2', pixels: '12', details: this.detailsArr6},
       {name: 'DJI Mavic PRO', price: 32500, minImg: 'assets/photo/dronMavicPro.jpg', fullImg: 'assets/photo/img5.JPG', charge: '27', controlLength: '7',
         speed: '65', sensorLength: '4.30', stabilizer: '3', pixels: '12', details: this.detailsArr1},
       {name: 'DJI Mavic 2 PRO/ZOOM', price: 34000, minImg: 'assets/photo/dronMavic2Pro.jpg', fullImg: 'assets/photo/img5.JPG', charge: '20', controlLength: '3',
@@ -77,8 +79,6 @@ export class DronesCatalogComponent implements OnInit {
         speed: '50', sensorLength: '30', stabilizer: '2', pixels: '12', details: this.detailsArr4},
       {name: 'DJI Phantom 4', price: 49500, minImg: 'assets/photo/dronPhantom4.jpg', fullImg: 'assets/photo/img5.JPG', charge: '30', controlLength: '7',
         speed: '72', sensorLength: '30', stabilizer: '4.60', pixels: '16', details: this.detailsArr5},
-      {name: 'XIAOMI MI DRONE 4K', price: 34000, minImg: 'assets/photo/dronXiaomiMi.jpg', fullImg: 'assets/photo/img5.JPG', charge: '20', controlLength: '3',
-        speed: '50', sensorLength: '30', stabilizer: '2', pixels: '12', details: this.detailsArr6},
     ];
   }
 
