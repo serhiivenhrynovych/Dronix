@@ -4,46 +4,6 @@
     <br>
     з якими ми працюємо
   </div>
-  <!--<div class="drone-info-wrapper">-->
-    <!--<div class="drone-info drone-info-back1">-->
-      <!--<div class="drone-content">-->
-        <!--<div class="image">-->
-          <!--<img src="assets/photo/drone1.jpg" alt="">-->
-        <!--</div>-->
-        <!--<div class="content-info">-->
-          <!--<div class="title">-->
-            <!--Mavic 2 Pro-->
-          <!--</div>-->
-          <!--<div class="text">-->
-            <!--Мы всегда мечтали создать совершенный коптер. Коптер, обладающий всеми лучшими технологиями DJI, коптер, который преобразит мир аэросъемки. Эта мечта исполнилась. Мы создали Mavic 2.-->
-          <!--</div>-->
-          <!--<div class="price">-->
-            <!--47 820 грн з ПДВ.-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="details-info">-->
-
-      <!--<div class="details-full-info" *ngFor="let elem of detailsArr; index as i">-->
-        <!--<div class="details-content">-->
-          <!--<div class="gallery">-->
-            <!--<a rel="simplebox" target="_blank">-->
-              <!--<img src="{{elem.minImg}}">-->
-            <!--</a>-->
-          <!--</div>-->
-          <!--<div class="drone-name">-->
-            <!--{{elem.name}}-->
-          <!--</div>-->
-          <!--<div class="drone-price-number">-->
-            <!--{{elem.price}} грн-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-
-    <!--</div>-->
-  <!--</div>-->
 
   <div class="drone-info-wrapper" *ngFor="let droneElem of dronesArr; index as i">
     <div class="drone-info drone-info-back2">
@@ -56,10 +16,10 @@
             {{droneElem.name}}
           </div>
           <div class="text">
-            Мы всегда мечтали создать совершенный коптер. Коптер, обладающий всеми лучшими технологиями DJI, коптер, который преобразит мир аэросъемки. Эта мечта исполнилась. Мы создали Mavic 2.
+            {{droneElem.shortInfo}}
           </div>
           <div class="price">
-            {{droneElem.price}} грн з ПДВ.
+            {{droneElem.price}} грн
           </div>
         </div>
       </div>
