@@ -47,8 +47,8 @@ export class DronesCatalogComponent implements OnInit {
     ];
 
     this.detailsArr4 = [
-      {name: 'Лопасті оригінал', price: 0, minImg: 'assets/photo/detail52.jpg', fullImg: 'assets/photo/img5.JPG'},
-      {name: 'Лопасті копія', price: 0, minImg: 'assets/photo/detail52.jpg', fullImg: 'assets/photo/img5.JPG'},
+      // {name: 'Лопасті оригінал', price: 0, minImg: 'assets/photo/detail52.jpg', fullImg: 'assets/photo/img5.JPG'},
+      // {name: 'Лопасті копія', price: 0, minImg: 'assets/photo/detail52.jpg', fullImg: 'assets/photo/img5.JPG'},
       {name: 'Шлейф Phantom 3 Standart', price: 550, minImg: 'assets/photo/detail51.jpg', fullImg: 'assets/photo/img5.JPG'},
       {name: 'Шлейф Phantom 3 Adv/PRO', price: 600, minImg: 'assets/photo/detail51.jpg', fullImg: 'assets/photo/img5.JPG'},
     ];
