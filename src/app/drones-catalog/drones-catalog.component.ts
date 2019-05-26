@@ -69,19 +69,19 @@ export class DronesCatalogComponent implements OnInit {
 
     this.dronesArr = [
       {
-        name: 'XIAOMI MI DRONE 4K', price: 13000, minImg: 'assets/photo/dronXiaomiMi.jpg', fullImg: 'assets/photo/img5.JPG',
+        name: 'XIAOMI MI DRONE 4K', price: 12999, minImg: 'assets/photo/dronXiaomiMi.jpg', fullImg: 'assets/photo/img5.JPG',
         charge: '27', controlLength: '4', speed: '60', sensorLength: '30', stabilizer: '3', pixels: '12', details: this.detailsArr6,
         shortInfo: 'Квадрокоптер Xiaomi Mi Drone 4K - це сучасний літальний апарат середніх розмірів з великими можливостями. ' +
           'Він має класичну конструкцію з чотирма лопатями і спеціальними ніжками для посадки.'
       },
       {
-        name: 'DJI Mavic PRO', price: 32500, minImg: 'assets/photo/dronMavicPro.jpg', fullImg: 'assets/photo/img5.JPG',
+        name: 'DJI Mavic PRO', price: 29999, minImg: 'assets/photo/dronMavicPro.jpg', fullImg: 'assets/photo/img5.JPG',
         charge: '27', controlLength: '7', speed: '65', sensorLength: '30', stabilizer: '3', pixels: '12', details: this.detailsArr1,
         shortInfo: 'DJI Mavic Pro є невеликим, але потужним безпілотником, який перетворює небо в Ваше творче полотно легко і ' +
           'невимушено, допомагаючи вам зробити кожен момент прекрасним.'
       },
       {
-        name: 'DJI Mavic 2 PRO/ZOOM', price: 42000, minImg: 'assets/photo/dronMavic2Pro.jpg', fullImg: 'assets/photo/img5.JPG',
+        name: 'DJI Mavic 2 PRO/ZOOM', price: 34500, minImg: 'assets/photo/dronMavic2Pro.jpg', fullImg: 'assets/photo/img5.JPG',
         charge: '31', controlLength: '8', speed: '65', sensorLength: '30', stabilizer: '3', pixels: '12', details: this.detailsArr2,
         shortInfo: '\n' +
           'Якщо Ви завжди мріяли побачити досконалий коптер. Коптер, що володіє всіма кращими технологіями DJI, коптер, який перетворить ' +
@@ -96,7 +96,7 @@ export class DronesCatalogComponent implements OnInit {
           'від невеликого планшета.'
       },
       {
-        name: 'DJI Phantom 3', price: 9000, minImg: 'assets/photo/dronPhantom3.jpg', fullImg: 'assets/photo/img5.JPG',
+        name: 'DJI Phantom 3', price: 14000, minImg: 'assets/photo/dronPhantom3.jpg', fullImg: 'assets/photo/img5.JPG',
         charge: '30', controlLength: '4', speed: '50', sensorLength: '30', stabilizer: '3', pixels: '12', details: this.detailsArr4,
         shortInfo: 'Від зльоту до посадки DJI Phantom 3 знаходиться повністю під вашим контролем, інтуїтивно відповідаючи на всі ' +
           'ваші команди в той же час система автопілота забезпечує вирішення найскладніших аспектів безпечного, стабільного польоту.'
